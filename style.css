@@ -3,30 +3,34 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #faf3e0; 
     color: #333;
+    line-height: 1.6;
+    background: url('aaaaa.jpg') no-repeat center center fixed;
 }
 
 header {
-    background-color: #333;
+    background-color: #076976; 
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .navbar .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-family: 'Montserrat', sans-serif;
+    color: #ffcc00; /* Golden color for logo */
 }
 
 .navbar nav ul {
@@ -37,19 +41,104 @@ header {
 }
 
 .navbar nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .navbar nav ul li a {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar nav ul li a:hover {
-    color: #ff4081;
+    color: #ffcc00; /* Golden color for hover */
+    border-bottom: 2px solid #ffcc00; /* Golden border on hover */
 }
+
+/* Adding some more global styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    background-color: #ffcc00; /* Golden color for buttons */
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800; 
+    border: 2px solid #ffcc00; 
+}
+
+/* Links */
+a {
+    color: #ffcc00; /* Golden color for links */
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    color: #e6b800; 
+    border-bottom: 2px solid #e6b800; 
+}
+
+/* Section styles */
+section {
+    padding: 60px 40px;
+    margin-top: 80px;
+    background-color: #fff8e1; 
+    border: 1px solid #ffd700; 
+}
+
+footer {
+    background-color: #076976;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #ffcc00; 
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+}
+
+
 
 main {
     margin-top: 60px; /* Height of the header */
@@ -101,14 +190,14 @@ main {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #ff4081;
+    background-color: #177ca1;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .hero-content button:hover {
-    background-color: #e73370;
+    background-color: #177ca1;
 }
 
 .slideshow {
@@ -167,7 +256,7 @@ main {
 .discount {
     margin: 40px 0;
     padding: 20px;
-    background-color: #ff4081;
+    background-color: #177ca1;
     color: white;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -194,7 +283,7 @@ main {
 .discount-banner button {
     padding: 10px 20px;
     font-size: 16px;
-    color: #ff4081;
+    color: #177ca1;
     background-color: white;
     border: none;
     cursor: pointer;
@@ -202,7 +291,7 @@ main {
 }
 
 .discount-banner button:hover {
-    background-color: #e73370;
+    background-color: #177ca1;
     color: white;
 }
 
@@ -289,15 +378,6 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
 /* Animations */
 @keyframes fadeIn {
