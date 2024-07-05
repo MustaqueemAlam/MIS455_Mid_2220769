@@ -1,13 +1,20 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     background-color: #333;
     color: white;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
@@ -19,6 +26,7 @@ header {
 
 .navbar .logo {
     font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar nav ul {
@@ -36,21 +44,97 @@ header {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-    text-decoration: underline;
+    color: #ff4081;
 }
 
 main {
+    margin-top: 60px; /* Height of the header */
     padding: 20px;
+    text-align: center;
+}
+
+main h1 {
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #ff4081;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 0;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    color: #ff4081;
+    margin: 20px 0;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ff4081;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #e73370;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -58,4 +142,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
 }
